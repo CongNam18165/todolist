@@ -1,0 +1,71 @@
+.box{
+    background: linear-gradient(135deg, #82D8D8 0%, #2BAE66 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px ;
+}
+.container {
+    background: linear-gradient(to bottom, #FFFFFF, #F5F5F5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px #eee;
+    border-radius: 8px;
+    width: fit-content;
+    padding: 16px;
+}
+.container h1{
+    margin: 0;
+    animation: blink 0.5s infinite;
+}
+.box-input{
+    border: 1px solid #28a745;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+.box-input input{
+    background-color: transparent;
+    border: none;
+}
+.box-input input:focus{
+    outline: none;
+}
+.box-input button{
+    font-weight: 500;
+    padding: 3px 8px;
+    border: 1px solid #28a745;
+    color: #28a745;
+    background-color: transparent; 
+    border-radius: 5px;
+}
+.box-input button:hover{
+   background-color: #28a745;
+   color: #fff;
+}
+.ul{
+    padding: 0;
+}
+.li{
+    
+    list-style: none;
+}
+.icon{
+    color: #28a745;
+}
+.trash{
+    margin-left: 16px;
+    cursor: pointer;
+}
+@keyframes blink {
+    0% {
+      color: red;
+    }
+    50% {
+        color: green;
+    }
+    100% {
+        color: orange;
+    }
+  }
