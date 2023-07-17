@@ -35,8 +35,8 @@ button.onclick = function () {
     if (value.value == "") { // nếu giá trị ở ô input là rỗng thì làm việc dưới
         alert("Hãy nhập công việc muốn làm") // thông báo người dùng nhập dữ liệu ô input
     } else { //nếu t/h trên sai thì làm khối lệnh dưới đây
-        DataJobs.push(value.value); // thêm giá trị ở ô input vào mảng datas
-        localStorage.setItem("Datas", JSON.stringify(DataJobs)) // lưu mảng datas vào localStorage
+        DataJobs.push(value.value); // thêm giá trị ở ô input vào mảng DataJobs
+        localStorage.setItem("Datas", JSON.stringify(DataJobs)) // lưu mảng DataJobs vào localStorage
         getData(); // gọi hàm getData
     }
 }
