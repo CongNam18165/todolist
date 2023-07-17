@@ -15,18 +15,19 @@ function render() {
 render(); //chạy hàm render
 function getData() {
     ul.innerHTML = ""; // Xóa nội dung hiện tại của ul
-    DataJobs.forEach((data) => { //duyệt qua các phần tử của mảng DataJobs
+    DataJobs.forEach((data,index) => { //duyệt qua các phần tử của mảng DataJobs
         let li = document.createElement("li"); // tạo element li 
         li.textContent = data; // cho thẻ li có nội dung là data
         li.innerHTML += `<i class="trash fa-solid fa-trash-can"></i>`// thêm icon bên cạnh nội dung của thẻ li
-        li.addEventListener("click", function trash(event) {
+        li.classList.add("li") // thêm class li vào element li
+        ul.appendChild(li);// render thẻ li ra giao diện người dùng
+        let trash = document.querySelectorAll(".trash")[index]; // lấy DOM element có icon thùng rác
+        trash.addEventListener("click", function trash(event) {
             event.target.parentElement.remove(); // xóa thẻ element chứa icon thùng rác vừa click
             newjobs = DataJobs.filter((datajobs) => datajobs !== data)// lọc mảng list công việc vừa tạo
             DataJobs = newjobs;// gán mảng list hiện tại là mảng mới 
             localStorage.setItem("Datas", JSON.stringify(newjobs))// lưu vào localStorage
         })
-        li.classList.add("li") // thêm class li vào element li
-        ul.appendChild(li);// render thẻ li ra giao diện người dùng
 
     });
 }
