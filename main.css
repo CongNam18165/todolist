@@ -55,7 +55,7 @@
     color: #28a745;
 }
 .trash{
-    margin-left: 16px;
+    
     cursor: pointer;
 }
 .box-jobs{
@@ -80,8 +80,30 @@
 .none{
     display: none;
 }
-table{
+
+table {
+    margin: 10px 0;
     font-size: 12px;
+    border: solid 1px black;
+}
+
+th {
+    text-align: center;
+    border: 1px solid rgb(190, 190, 190);
+}
+
+td {
+text-align: center;
+    border: 1px solid rgb(190, 190, 190);
+}
+.delete-pick{
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+}
+.delete-pick:hover{
+        background-color: red;
+        color: white;
 }
 @keyframes blink {
     0% {
