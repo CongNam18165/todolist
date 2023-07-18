@@ -58,6 +58,31 @@
     margin-left: 16px;
     cursor: pointer;
 }
+.box-jobs{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.box-jobs span{
+    min-width: 70px;
+}
+.edit-btn{
+    background-color: transparent;
+    border: none;
+}
+.edit-btn i{
+    padding: 5px;
+    cursor: pointer;
+}
+.block{
+    display: block;
+}
+.none{
+    display: none;
+}
+table{
+    font-size: 12px;
+}
 @keyframes blink {
     0% {
       color: red;
